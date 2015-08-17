@@ -1,0 +1,4 @@
+#! /bin/bash 
+cp ./_vimrc.before.local ~/.vimrc.before.local
+cp ./_vimrc.local ~/.vimrc.local
+cp ./_vimrc.bundles.local ~/.vimrc.bundles.local 
