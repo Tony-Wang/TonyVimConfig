@@ -1,4 +1,23 @@
 #! /bin/bash 
-cp ./_vimrc.before.local ~/.vimrc.before.local
-cp ./_vimrc.local ~/.vimrc.local
-cp ./_vimrc.bundles.local ~/.vimrc.bundles.local 
+
+case $1 in 
+    install)
+        cp ./_vimrc.before.local ~/.vimrc.before.local
+        cp ./_vimrc.local ~/.vimrc.local
+        cp ./_vimrc.bundles.local ~/.vimrc.bundles.local 
+        ;;
+    commit)
+        if [ -e ~/.vimrc.before.local ]; then
+            cp ~/.vimrc.before.local ./_vimrc.before.local
+        fi
+        if [ -e ~/.vimrc.local ]; then
+            cp ~/.vimrc.local ./_vimrc.local
+        fi
+        if [ -e ~/.vimrc.bundles.local ]; then
+            cp ~/.vimrc.bundles.local  ./_vimrc.bundles.local 
+        fi
+        git commit -m `date`
+        git push
+        ;;
+esac 
+

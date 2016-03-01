@@ -48,7 +48,7 @@ if MySys() == "mac"
 elseif MySys() == "windows"
   set gfn=Courier\ New\ Bold:h14
 elseif MySys() == "linux"
-  set gfn=文泉驿等宽微米黑\ 14
+  set gfn=ubuntu\ mono\ 18
   set shell=/bin/bash
 endif
 
@@ -258,6 +258,9 @@ map <leader>tm :tabmove
 " When pressing <leader>cd switch to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>
 
+map <leader>w :w<cr>
+map <leader>wa :wa<cr>
+map <leader>ws :w !sudo tee %<cr>
 
 command! Bclose call <SID>BufcloseCloseIt()
 function! <SID>BufcloseCloseIt()
