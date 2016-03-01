@@ -16,7 +16,7 @@ case $1 in
         if [ -e ~/.vimrc.bundles.local ]; then
             cp ~/.vimrc.bundles.local  ./_vimrc.bundles.local 
         fi
-        git commit -m `date`
+        git commit . -m "`date`"
         git push
         ;;
 esac 
