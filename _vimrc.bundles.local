@@ -1,0 +1,3 @@
+Bundle "leafgarland/typescript-vim"
+Bundle "alfredodeza/pytest.vim"
+Bundle "myusuf3/numbers.vim"
